@@ -59,8 +59,17 @@ a {
 	 text-decoration: none;
 }
 
-
-
+hr {
+	width: 90%;
+}
+.line{ 
+    display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
 .cover {
 	height: 100vh;
 	background: linear-gradient(180deg, rgba(15,15,15, 1) 60%, rgba(71, 4, 4, 1));
@@ -119,7 +128,7 @@ header div{
 }
 
 .work-item {
-	margin-top: 5%;
+	margin: 5% 0%;
 }
 
 .image-container img {
@@ -162,4 +171,16 @@ box-shadow: 145px 152px 26px -150px rgba(0,0,0,0.75);
 }
 .bottom-shadow{
 
+}
+.tech-image{
+	width: 5vw;
+	margin: 2% 5%;
+}
+.tech-image img{
+	width: 100%;
+	filter: grayscale(1) hue-rotate(90deg);
+}
+.tech-image img:hover{
+	filter: grayscale(0);
+	
 }
