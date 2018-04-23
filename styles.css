@@ -2,17 +2,17 @@
     font-size: 18px;
 }
 body {
-	/*background: linear-gradient(135deg, rgba(247, 202, 201, 0.1), rgba(146, 168, 209, 0.4));*/
 	margin: 0px;
 	padding: 0px;
 	font-family: "Raleway", sans-serif;
 }
 .container {
-	margin: 5% 5%;
+	margin: 5% 0%;
+	padding: 5% 5%;
 }
 
 .container-fluid {
-	margin: 0% 0%;
+	margin: 5% 0%;
 }
 
 .row {
@@ -36,9 +36,12 @@ nav {
     background-color: rgba(0,0,0,0.8);
     border-bottom: 1px solid rgba(71, 4, 4, 0.9);
     text-transform: uppercase;
-      /*position: -webkit-sticky;*/
-  position: sticky;
-  top: 0;
+    position: -webkit-sticky;
+  	position: sticky;
+  	top: 0;
+  	z-index: 2;
+    overflow-y: hidden;
+	transition: all .5s ease-in-out;
 }
 
 .nav-item {
@@ -104,14 +107,23 @@ header div{
 
 .container h2{
 	color: maroon;
-	font-weight: 50;
+	font-weight: normal;
 	letter-spacing: 5px;
+	padding-bottom: 1%;
 	text-transform: uppercase;
+	text-align: center;
 	border-bottom: 1px solid maroon;	
+}
+
+.container:nth-child(even){
+	background: rgb(238,238,238);
 }
 
 .container p{
 	line-height: 1.5;
+}
+
+#section-about p{
 	width: 60vw;
 }
 
@@ -173,14 +185,80 @@ box-shadow: 145px 152px 26px -150px rgba(0,0,0,0.75);
 
 }
 .tech-image{
-	width: 5vw;
-	margin: 2% 5%;
+	width: 7vw;
+	height: 7vw;
+	margin: 2% 3%;
+	align-items: center;
+	text-align: center;
+	justify-content: space-around;
 }
 .tech-image img{
-	width: 100%;
-	filter: grayscale(1) hue-rotate(90deg);
+	width: 60%;
+	filter: grayscale(1);
+}
+.tech-image small{
+	font-size: 75%;
+
 }
 .tech-image img:hover{
+	  transition: all 0.4s ease;
 	filter: grayscale(0);
 	
 }
+.small-button{
+	font-size: 0.7rem;
+	background: transparent;
+	color: maroon;
+	text-transform: uppercase;
+	
+	border: 1px solid maroon;
+	
+}
+
+.small-button:hover{
+	 transition: all 0.5s ease;
+	background: maroon;
+	color: white;
+}
+
+.email{
+	font-size: 2rem;
+	margin-bottom: 2%;
+	overflow-y: hidden;
+	transition: all .7s ease-in-out;
+}
+.email:hover {
+	letter-spacing: 15px;
+	font-weight: 1000;
+background: linear-gradient(349deg, #e32717, #3b9bb2, #7962cb, #36c166);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 20s ease infinite;
+-moz-animation: AnimationName 20s ease infinite;
+animation: AnimationName 20s ease infinite;
+
+-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 34%}
+    50%{background-position:100% 67%}
+    100%{background-position:0% 34%}
+}
+
+
+

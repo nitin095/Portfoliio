@@ -8,14 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<nav>
-		<div class="row justify-content-end">
-			  	<div class="nav-item active"><a href="#section-home">Home</a></div>
-			  	<div class="nav-item"><a href="#section-about">About</a></div>
-			  	<div class="nav-item"><a href="#section-work">Work</a></div>
-			  	<div class="nav-item"><a href="#section-contact">Contact</a></div>
-		</div>
-	</nav>
+	
 	<div id="section-home" class="cover">	
 	<header>
 		<h1>
@@ -26,6 +19,17 @@
 		</div>
 	</header>
 	</div>
+
+	<nav id="nav" class="row justify-content-end">
+		
+			  	<div class="nav-item active" id="nav-home"><a href="#section-home">Home</a></div>
+			  	<div class="nav-item" id="nav-about"><a href="#section-about">About</a></div>
+			  	<div class="nav-item" id="nav-tech"><a href="#section-technologies">Techologies</a></div>
+			  	<div class="nav-item" id="nav-work"><a href="#section-work">Work</a></div>
+			  	<div class="nav-item" id="nav-contact"><a href="#section-contact">Contact</a></div>
+	
+	</nav>
+
 
 	<div id="section-about" class="container">
 		<h2>About</h2>
@@ -42,24 +46,23 @@
 	</div>
 	<!-- end about section -->
 
-	<div id="section-technologies">
-		<div class="container">
+	<div id="section-technologies" class="container">
 			<h2>Technologies</h2>
-			<p>Currently i work on following technologies.</p>
-			<div class="row" style="justify-content: center; align-items: center;text-align: center;">
-				<div class="tech-image"><img src="images/html.png"><small>HTML</small></div>
-				<div class="tech-image"><img src="images/css.png"><small>CSS</small></div>
-				<div class="tech-image"><img src="images/js.png"><small>Javascipt</small></div>
-				<div class="tech-image"><img src="images/jquery.png" style="transform: scale(1.5);"><small>Jquery</small></div>
-				<div class="tech-image"><img src="images/bootstrap.png"><small>Bootstrap</small></div>
-				<div class="tech-image"><img src="images/mat.png"><small>Materialize</small></div>
-				<div class="tech-image"><img src="images/angular.png"><small>Angular</small></div>
-				<div class="tech-image"><img src="images/nodejs.png" style="transform: scale(1.5);"><small>NodeJS</small></div>
-				<div class="tech-image"><img src="images/express.png" style="transform: scale(1.5);"><small>Express</small></div>
-				<div class="tech-image"><img src="images/mongodb.png" style="transform: scale(2);"><small>MongoDB</small></div>
-				<div class="tech-image"><img src="images/mongoose.png" style="transform: scale(1.5);"><small>Mongoose</small></div>
+			<p style="text-align: center;">Currently i work on following technologies.</p>
+			<div class="row" style="justify-content: center; align-items: center;">
+				<div class="column tech-image"><img src="images/html.png"><small>HTML</small></div>
+				<div class="column tech-image"><img src="images/css.png"><small>CSS</small></div>
+				<div class="column tech-image"><img src="images/js.png"><small>Javascipt ES6</small></div>
+				<div class="column tech-image"><img src="images/jquery.png" style="transform: scale(1.5);"><small>Jquery</small></div>
+				<div class="column tech-image"><img src="images/angular.png"><small>Angular</small></div>
+				<div class="column tech-image"><img src="images/bootstrap.png"><small>Bootstrap</small></div>
+				<div class="column tech-image"><img src="images/mat.png"><small>Materialize</small></div>
+				<div class="column tech-image"><img src="images/nodejs.png" style="transform: scale(1.5);"><small>NodeJS</small></div>
+				<div class="column tech-image"><img src="images/express.png" style="transform: scale(1.5);"><small>Express</small></div>
+				<div class="column tech-image"><img src="images/mongodb.png" style="transform: scale(2);"><small>MongoDB</small></div>
+				<div class="column tech-image"><img src="images/mongoose.png" style="transform: scale(1.5);"><small>Mongoose</small></div>
+				<div class="column tech-image"><img src="images/nginx.png" style="transform: scale(1.5);"><small>Nginx</small></div>
 			</div>
-		</div>
 	</div>
 
 	<div id="section-work" class="container">
@@ -69,7 +72,10 @@
 			<div class="column" style="width: 30vw; justify-content: center;">
 				<a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank"><h3>Ice &#38; Fire Universe</h3></a>
 				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
-				<small>Preview</small>
+				<div class="row" style="justify-content: flex-start;">
+					<a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank"><button class="small-button">Preview</button></a><span>.    .</span>
+					<a href="#"><button class="small-button">View github repository</button></a>
+				</div>
 			</div>
 
 		<div class="image-container">
@@ -90,6 +96,10 @@
 		<div class="column" style="width: 30vw; justify-content: center;">
 				<a href="#" target="blank"><h3>Premiun League</h3></a>
 				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
+				<div class="row">
+					<small style="margin-right: 2%"><a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank" style="text-decoration: none;color: maroon">Preview</a></small>
+					<small><a href="#" style="text-decoration: none;color: maroon">View github repository</a></small>
+				</div>
 		</div>
 
 		</div>
@@ -100,6 +110,10 @@
 			<div class="column" style="width: 30vw; justify-content: center;">
 				<a href="https://cdn.rawgit.com/nitin095/Fb-graph-api/d516c344/index.html" target="blank"><h3>Faceboook Graph API</h3></a>
 				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
+				<div class="row">
+					<small style="margin-right: 2%"><a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank" style="text-decoration: none;color: deepskyblue">Preview</a></small>
+					<small><a href="#" style="text-decoration: none;color: deepskyblue">View github repository</a></small>
+				</div>
 			</div>
 		
 		<div class="image-container">
@@ -112,23 +126,59 @@
 	</div> 
 	<!-- end work section -->
 
-	<div id="section-contact">
-		<div class="container">
+	<div id="section-contact" class="container">
 			<h2>Contact</h2>
+			<div class="column" style="align-items: center;"> 
 			<p>Say hello to me at</p>
-			<div style="font-size: 2rem;">nitinshokeen9@gmail.com</div>
-			<div class="contact-item">
+			<div class="email">nitinshokeen9@gmail.com</div>
+			<div class="contact-item row" style="width: 10vw;justify-content: space-around;">
 				<a href="https://www.facebook.com/nitinshokeen9" target="blank"><i class="fab fa-facebook-f"></i></a>
 				<a href="https://www.github.com/nitin095" target="blank"><i class="fab fa-github"></i></a>
 			</div>
-		</div>
+			</div>
 	</div>
+
 	<!-- end contact section -->
 
 	<footer>
 		<div style="text-align: center;padding: 2% 0%;">
-                © 2018 Nitin Shokeen
+                © 2018 Handmade by Nitin Shokeen
         </div>
 	</footer>
 </body>
+<script type="text/javascript">
+	let navAbout = document.getElementById('nav-about');
+	let navTech = document.getElementById('nav-tech');
+	let navWork = document.getElementById('nav-work');
+	let navContact = document.getElementById('nav-contact');
+
+	let aboutSection = document.getElementById('section-about');
+	let technologiesSection = document.getElementById('section-technologies');
+	let workSection = document.getElementById('section-work');
+	let contactSection = document.getElementById('section-contact');
+
+	// heights of all sections
+	let aboutSectionHeight = aboutSection.offsetTop;
+	let technologiesSectionHeight = technologiesSection.offsetTop;
+	let workSectionHeight = workSection.offsetTop;
+	let contactSectionHeight = contactSection.offsetTop;
+
+	window.onscroll = function() {myFunction()};
+	let navBarHeight = document.getElementById('nav').offsetTop;
+function myFunction() {
+     if (document.body.scrollTop > navBarHeight || document.documentElement.scrollTop > navBarHeight) {
+         document.getElementById("nav").style.opacity = "1";
+         navAbout.className = 'nav-item active';
+     } else {
+         document.getElementById("nav").style.opacity = "0";
+     }
+     if (document.body.scrollTop > technologiesSectionHeight || document.documentElement.scrollTop > technologiesSectionHeight) {
+     	navTech.className = 'nav-item active';
+     } 
+     if (document.body.scrollTop > workSectionHeight || document.documentElement.scrollTop > workSectionHeight) {
+     	navWork.className = 'nav-item active';
+     }
+
+}
+</script>
 </html>
