@@ -39,6 +39,14 @@ body {
 	justify-content: center;
 }
 
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
 a {
 	text-decoration: none;
 }
@@ -82,8 +90,15 @@ hr {
 }
 
 .container h3:hover {
-	color: black;
+	
 	background: darkgrey;
+
+	background: linear-gradient(349deg, #e32717, #3b9bb2, #7962cb, #36c166);
+		background-size: 800% 800%;
+		-webkit-animation: AnimationName 20s ease infinite;
+		-moz-animation: AnimationName 20s ease infinite;
+		animation: AnimationName 20s ease infinite;
+
 }
 
 .container i {
@@ -91,6 +106,7 @@ hr {
 	margin-top: 2%;
 	margin-right: 2%;
 	font-size: 2rem;
+	transition: all 0.5s ease;
 }
 
 .container i:hover {
@@ -129,7 +145,7 @@ header div{
 	text-align: center;
 	font-size: 8rem;
 	font-weight: 500;
-	line-height: 0.9;
+	line-height: 0.9;	
 }
 /*end cover*/
 
@@ -163,6 +179,14 @@ nav {
 .nav-item.active {
     border-bottom: 3px solid maroon;
 }
+
+#menu-toggle {
+		color: white;
+		display: none;
+		font-size: 1.5rem;
+		margin: 0.5rem;
+		transition: all 5s ease;
+	}
 /*end nav bar*/
 
 
@@ -173,9 +197,43 @@ nav {
 
 .my-image {
 	width: 20vw;
+	transform: rotate(-5deg);
+}
+
+.my-image-container{
+	transform: rotate(5deg);
+	background: maroon;
 	-webkit-box-shadow: 0px 13px 38px -10px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 13px 38px -10px rgba(0,0,0,0.75);
 	box-shadow: 0px 13px 38px -10px rgba(0,0,0,0.75);
+}
+
+#section-about img{
+background: linear-gradient(330deg, #d5dcda, #d7e5e9, #ebeae0, #e4dbeb);
+background-size: 1000% 1000%;
+
+/*transform: rotate(-45deg);*/
+
+
+-webkit-animation: image-animation 10s ease infinite;
+-moz-animation: image-animation 10s ease infinite;
+animation: image-animation 10s ease infinite;
+
+}
+@-webkit-keyframes image-animation {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes image-animation {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes image-animation { 
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
 }
 /*end about section*/
 
@@ -231,20 +289,19 @@ nav {
 .image {
 	width: 35vw;
 }
-
-.small-button{
-	font-size: 0.7rem;
-	background: transparent;
+.work-link a{
 	color: maroon;
-	text-transform: uppercase;
-	border: 1px solid maroon;	
+	font-size: 0.8rem;
+	transition: all 1s ease;
+}
+.work-link a:first-child{
+	margin-right: 0.5rem;
+}
+.work-link a:hover{
+	letter-spacing: -0.2px;
+	text-decoration: underline;
 }
 
-.small-button:hover{
-	 transition: all 0.5s ease;
-	background: maroon;
-	color: white;
-}
 /*end work section*/
 
 /*contact section*/
@@ -386,6 +443,32 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
+
+	header h1{
+		font-size: 1.5rem;
+	}
+
+	header div{
+		color: white;
+		background: linear-gradient(to bottom, rgba(64, 65, 68, 1) 50%, rgba(71, 4, 4, 1) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-top: 5%;
+		text-align: center;
+		font-size: 4rem;
+		font-weight: 500;
+		line-height: 0.9;	
+	}
+	/*end cover*/
+
+	/*nav bar*/
+	.nav-item {
+		display: none;
+	}
+	#menu-toggle {
+		display: flex;
+	}
+	/*end nav bar*/
 	p {
 		text-align: center;
 	}
@@ -473,3 +556,4 @@ nav {
 
 }
 /*end media queries*/
+
