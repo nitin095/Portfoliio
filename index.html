@@ -3,14 +3,13 @@
 <head>
 	<title>Nitin Shokeen</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	
 	<div id="section-home" class="cover">	
-	<header class="column justify-content-center">
+	<header class="column justify-content-center align-items-center">
 		<h1>
 			Nitin Shokeen
 		</h1>
@@ -27,7 +26,8 @@
 			  	<div class="nav-item" id="nav-tech"><a href="#section-technologies">Techologies</a></div>
 			  	<div class="nav-item" id="nav-work"><a href="#section-work">Work</a></div>
 			  	<div class="nav-item" id="nav-contact"><a href="#section-contact">Contact</a></div>
-			  	<div>
+			  	<div id="m-menu" class="row align-items-center justify-content-between">
+			  		<span id="menu-logo">Nitin Shokeen</span>
 			  		<i id="menu-toggle" class="fas fa-bars" onclick="showMenu()"></i>
 			  	</div>
 	
@@ -42,7 +42,7 @@
 		<p>I currently work on front-end technologies like HTML5, CSS3, Javascript ES6, Jquery, frameworks like Bootstrap, Angular &#38; back-end technologies like JSON, NodeJS, MongoDB, framworks like ExpressJS, Mongoose. I'm very familiar with using servers such as Nginx.</p>
 		<p>In a quest for always keeping myself updated i always learn new technologies.</p>
 		</div>
-		<div class="my-image-container">
+		<div class="my-image-container align-self-center">
 			<img class="my-image" src="images/me.png">
 		</div>
 		</div>
@@ -169,6 +169,7 @@
 	window.onscroll = function() {myFunction()};
 	let navBarHeight = document.getElementById('nav').offsetTop;
 function myFunction() {
+
      if (document.body.scrollTop > navBarHeight || document.documentElement.scrollTop > navBarHeight) {
          document.getElementById("nav").style.opacity = "1";
          navAbout.className = 'nav-item active';
@@ -187,24 +188,45 @@ function myFunction() {
 let showMenu = ()=>{
 	let navBar = document.getElementById('nav');
 	let navItems = document.getElementsByClassName('nav-item');
+	let menu = document.getElementById('m-menu');
 	let toggleIcon = document.getElementById('menu-toggle');
+	let logo = document.getElementById('menu-logo');
 
 	if (navItems[0].style.display === "none" ) {
 		navBar.className = "column justify-content-center align-items-center";
 		for (item of navItems) {
 			item.style.display = 'flex';
 		}
+		menu.className = "row align-items-center justify-content-center";
 		toggleIcon.className = "fas fa-angle-up";
+		logo.style.display = "none";
 	} else {
 		navBar.className = "row justify-content-end align-items-center";
 		for (item of navItems) {
 			item.style.display = 'none';
 		}
+		menu.className = "row align-items-center justify-content-between";
 		toggleIcon.className = "fas fa-bars";
+		logo.style.display = "flex";
 	}
 
-	
 }//end showMenu
+
+
+// for smoothly scrolling into sections
+let anchorlinks = document.querySelectorAll('a[href^="#"]');
+ 
+for (let item of anchorlinks) { 
+    item.addEventListener('click', (e)=> {
+        let hashval = item.getAttribute('href');
+        let target = document.querySelector(hashval);
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+        e.preventDefault();
+    })
+}
 
 </script>
 </html>
