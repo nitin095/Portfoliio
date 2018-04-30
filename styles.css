@@ -118,14 +118,14 @@ hr {
 .cover {
 	height: 100vh;
 	background: linear-gradient(180deg, rgba(15,15,15, 1) 60%, rgba(71, 4, 4, 1));
-	margin: 0px
+	margin: 0px;
 	-webkit-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.61);
 	-moz-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.61);
 	box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.61);
 }
 
 header{
-	padding: 5%;
+	height: 100%;
 }
 
 header h1{
@@ -134,6 +134,7 @@ header h1{
 	text-transform: uppercase;
 	letter-spacing: 15px;
 	text-align: center;
+	transform: translateY(-5vw);
 }
 
 header div{
@@ -141,7 +142,6 @@ header div{
 	background: linear-gradient(to bottom, rgba(64, 65, 68, 1) 50%, rgba(71, 4, 4, 1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-top: 5%;
 	text-align: center;
 	font-size: 8rem;
 	font-weight: 500;
@@ -184,7 +184,7 @@ nav {
 		color: white;
 		display: none;
 		font-size: 1.5rem;
-		margin: 0.5rem;
+		margin: 0.3rem;
 		transition: all 5s ease;
 	}
 /*end nav bar*/
@@ -196,11 +196,13 @@ nav {
 }
 
 .my-image {
-	width: 20vw;
+	width: 100%;
 	transform: rotate(-5deg);
 }
 
 .my-image-container{
+	width: 20vw;
+	height: 21vw;
 	transform: rotate(5deg);
 	background: maroon;
 	-webkit-box-shadow: 0px 13px 38px -10px rgba(0,0,0,0.75);
@@ -350,6 +352,15 @@ animation: image-animation 10s ease infinite;
 /*media queries*/
 @media screen and (min-width: 769px) {
 
+/*nav bar*/
+	.nav-item {
+		display: flex;
+	}
+	#menu-toggle {
+		display: none;
+	}
+	/*end nav bar*/
+
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -368,8 +379,9 @@ animation: image-animation 10s ease infinite;
 		align-items: center;
 	}
 
-	.my-image {
+	.my-image-container {
 		width: 30vw;
+		height: 31vw;
 	}
 
 	/*tech section*/
@@ -446,6 +458,9 @@ animation: image-animation 10s ease infinite;
 
 	header h1{
 		font-size: 1.5rem;
+		transform: translateY(-30vw);
+		line-height: 3rem;
+
 	}
 
 	header div{
@@ -457,7 +472,7 @@ animation: image-animation 10s ease infinite;
 		text-align: center;
 		font-size: 4rem;
 		font-weight: 500;
-		line-height: 0.9;	
+		line-height: 4rem;	
 	}
 	/*end cover*/
 
@@ -469,6 +484,7 @@ animation: image-animation 10s ease infinite;
 		display: flex;
 	}
 	/*end nav bar*/
+
 	p {
 		text-align: center;
 	}
@@ -483,8 +499,9 @@ animation: image-animation 10s ease infinite;
 		align-items: center;
 	}
 
-	.my-image {
+	.my-image-container {
 		width: 50vw;
+		height: 52vw;
 	}
 
 	/*tech section*/
