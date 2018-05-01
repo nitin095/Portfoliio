@@ -148,12 +148,12 @@ header h1{
 }
 
 header div{
-	background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 50%, rgba(71, 4, 4, 1) 100%);
+	background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 70%, rgba(71, 4, 4, 1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-align: center;
 	font-family: 'Raleway Dots', cursive;
-	font-size: 7rem;
+	font-size: 8rem;
 	line-height: 0.9;	
 }
 /*end cover*/
@@ -172,6 +172,7 @@ nav {
 }
 
 .nav-item {
+	color: white;
     font-size: 0.6rem;
     letter-spacing: 0.1rem;
     text-align: center;
@@ -179,14 +180,9 @@ nav {
     transition: all 0.5s ease;
 }
 
-.nav-item a{
-	color: white;
-}
-
 .nav-item:hover {
 	font-weight: bold;
 	background: rgba(128,0,0,0.4);
-    /*border-bottom: 3px solid white;*/
 }
 
 .nav-item.active {
