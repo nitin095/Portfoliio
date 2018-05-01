@@ -161,7 +161,7 @@ header div{
 /*nav bar*/
 nav {
     background-color: rgba(0,0,0,0.8);
-    border-bottom: 1px solid rgba(71, 4, 4, 0.9);
+    border-bottom: 2px solid rgb(165, 54, 54);
     text-transform: uppercase;
     position: -webkit-sticky;
   	position: sticky;
@@ -173,8 +173,10 @@ nav {
 
 .nav-item {
     font-size: 0.6rem;
+    letter-spacing: 0.1rem;
     text-align: center;
     padding: 14px 16px;
+    transition: all 0.5s ease;
 }
 
 .nav-item a{
@@ -182,19 +184,22 @@ nav {
 }
 
 .nav-item:hover {
-    border-bottom: 3px solid white;
+	font-weight: bold;
+	background: rgba(128,0,0,0.4);
+    /*border-bottom: 3px solid white;*/
 }
 
 .nav-item.active {
-    border-bottom: 3px solid maroon;
+	background: maroon;
 }
 
 #m-menu {
-	width: 75%;
+	width: 70%;
 }
 
 nav.row span {
 	color: white;
+	font-size: 0.7rem;
 	letter-spacing: 5px;
 	display: none;
 }
