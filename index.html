@@ -155,8 +155,9 @@
 	let coverHeight = document.getElementById('section-home').clientHeight;
 
 	window.onscroll = function() {myFunction()};
+	window.onresize = function() {myFunction()};
 	
-	myFunction = ()=>{
+	let myFunction = ()=>{
 	     if (document.body.scrollTop > coverHeight || document.documentElement.scrollTop > coverHeight) {
 	         document.getElementById("nav").style.opacity = "1";
 	     } else {
