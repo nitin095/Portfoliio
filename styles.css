@@ -47,6 +47,10 @@ body {
 	justify-content: space-between;
 }
 
+.justify-content-around {
+	justify-content: space-around;
+}
+
 .align-items-center {
 	align-items: center;
 }
@@ -315,8 +319,9 @@ animation: image-animation 10s ease infinite;
 	font-size: 0.8rem;
 	transition: all 1s ease;
 }
-.work-link a:first-child{
-	margin-right: 0.5rem;
+
+.work-link a:first-child {
+	margin-right: 1rem;
 }
 .work-link a:hover{
 	letter-spacing: -0.2px;
@@ -435,6 +440,9 @@ animation: image-animation 10s ease infinite;
     .work-item div:first-child{
         width: 100%;
     }
+    .work-link {
+    	justify-content: center;
+    }
     .container h3{
         color: white;
         width: 100%;
@@ -455,8 +463,11 @@ animation: image-animation 10s ease infinite;
         border: 2px solid white;
         z-index: 1;
     }
+    .image-container img:nth-child(odd){
+        transform: translateX(5vw);
+    }
     .image-container img:nth-child(even){
-        transform: translateX(-10vw);
+        transform: translateX(-5vw);
     }
     .image {
         align-self: flex-end;
@@ -556,6 +567,9 @@ animation: image-animation 10s ease infinite;
     .work-item div:first-child{
         width: 100%;
     }
+    .work-link {
+    	justify-content: center;
+    }
     .container h3{
         color: white;
         width: 60vw;
@@ -576,8 +590,11 @@ animation: image-animation 10s ease infinite;
         border: 2px solid white;
         z-index: 1;
     }
+    .image-container img:nth-child(odd){
+        transform: translateX(5vw);
+    }
     .image-container img:nth-child(even){
-        transform: translateX(-10vw);
+        transform: translateX(-5vw);
     }
     .image {
         align-self: flex-end;
@@ -591,7 +608,7 @@ animation: image-animation 10s ease infinite;
         transition: all .7s ease-in-out;
     }
     .email:hover {
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         font-weight: 1000;
         background: linear-gradient(349deg, #e32717, #3b9bb2, #7962cb, #36c166);
         background-size: 800% 800%;
