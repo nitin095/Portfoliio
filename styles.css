@@ -70,10 +70,8 @@ hr {
 .line{ 
     display:block;
     border:none;
-    color:white;
-    height:1px;
-    background:black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+    height:1.5px;
+    background: radial-gradient(ellipse at 50% -100%,  rgba(0,0,0,1) 0,transparent 70%);
 }
 
 .container h2{
@@ -143,11 +141,13 @@ header{
 header h1{
 	color: rgb(179, 182, 188);
 	font-size: 2rem;
-	text-transform: uppercase;
 	letter-spacing: 15px;
-	text-align: center;
+	margin-right: -15px; /*to remove letter spacing from last character*/
 	font-weight: lighter;
+	text-align: center;
+	text-transform: uppercase;
 	transform: translateY(-5vw);
+	align-self: center;
 }
 
 header div{
@@ -237,9 +237,6 @@ nav.row span {
 background: linear-gradient(330deg, #d5dcda, #d7e5e9, #ebeae0, #e4dbeb);
 background-size: 1000% 1000%;
 
-/*transform: rotate(-45deg);*/
-
-
 -webkit-animation: image-animation 10s ease infinite;
 -moz-animation: image-animation 10s ease infinite;
 animation: image-animation 10s ease infinite;
@@ -309,11 +306,14 @@ animation: image-animation 10s ease infinite;
 
 .portrait-image {
 	height: 30vw;
+	transition: all 0.5s ease;
 }
 
-.image {
+.image{
 	width: 35vw;
+	transition: all 0.5s ease;
 }
+
 .work-link a{
 	color: maroon;
 	font-size: 0.8rem;
@@ -353,6 +353,37 @@ animation: image-animation 10s ease infinite;
 }
 /*end contact section*/
 
+footer{
+	text-align: center;
+	padding: 1% 0%;
+	font-size: 0.8rem;
+}
+footer div{
+
+}
+footer i{
+	font-size: 2rem;
+	color: grey;
+	opacity: 0.5;
+	transition: all 0.5s ease;
+}
+#up-button span {
+	opacity: 0;
+	transition: all 0.8s ease;
+	color: black;
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	font-weight: bold;
+}
+#up-button i:hover{
+	color: maroon;
+	transform: scale(1.1);
+	font-size: 2rem;
+	opacity: 1;
+}
+#up-button i:hover ~ span{
+	opacity: 1;
+}
 
 /*animations*/
 @-webkit-keyframes AnimationName {
@@ -400,7 +431,6 @@ animation: image-animation 10s ease infinite;
         -webkit-text-fill-color: transparent;
         margin-top: 5%;
         text-align: center;
-    /*  //////////////////////////////*/
         font-size: 4rem;
         line-height: 4rem;  
     }
@@ -578,6 +608,9 @@ animation: image-animation 10s ease infinite;
         background: rgba(0,0,0,0.7);
         text-align: center;
     }
+    .work-item:nth-of-type(2) h3{
+		align-self: flex-end;
+	}
     .image-container{
         display: flex;
         flex-direction: row;

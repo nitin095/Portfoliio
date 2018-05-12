@@ -52,7 +52,7 @@
 	<div id="section-technologies" class="container">
 			<h2>Technologies</h2>
 			<p style="text-align: center;">Currently i work on following technologies.</p>
-			<div class="row" style="justify-content: center; align-items: center;">
+			<div class="row justify-content-center align-items-center">
 				<div class="column tech-image"><img src="images/html.png"><small>HTML</small></div>
 				<div class="column tech-image"><img src="images/css.png"><small>CSS</small></div>
 				<div class="column tech-image"><img src="images/js.png"><small>Javascipt ES6</small></div>
@@ -71,33 +71,33 @@
 	<div id="section-work" class="container">
 		<h2>Work</h2>
 
-		<div class="row work-item" style="justify-content: space-between;">
+		<div class="row work-item justify-content-between">
 			<div class="column">
 				<h3>Ice &#38; Fire Universe</h3>
-				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
+				<p>A website showing all the books, characters and houses in Ice and Fire universe by using "An API of Ice And Fire". An API of Ice And Fire is the world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones.</p>
 				<div class="work-link row">
 					<a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank">View website</a>
-					<a href="#">Github repository</a>
+					<a href="https://github.com/nitin095/Ice-and-fire---API">Github repository</a>
 				</div>
 			</div>
 
 		<div class="image-container">
 			<img class="image" src="images/icefire1.jpg">
-			<img class="portrait-image" src="images/icefire3.jpg">
+			<img class="portrait-image" src="images/icefiremobile1.jpg">
 		</div>
 
 		</div>
 
 		<span class="line"></span>
 
-		<div class="row work-item" style="justify-content: space-between;">
+		<div class="row work-item justify-content-between">
 
 		<div class="column">
 				<h3>Premiun League</h3>
-				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
+				<p>English Premier League matches results of season 2015/16 and 2016/17 using basic angular.</p>
 				<div class="work-link row">
-					<a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank">View website</a>
-					<a href="#">Github repository</a>
+					<a href="https://rawgit.com/nitin095/Basic-angular/master/index.html" target="blank">View website</a>
+					<a href="https://github.com/nitin095/Basic-angular">Github repository</a>
 				</div>
 		</div>
 
@@ -110,13 +110,13 @@
 
 		<span class="line"></span>
 
-		<div class="row work-item" style="justify-content: space-between;">
+		<div class="row work-item justify-content-between">
 			<div class="column">
 				<h3>Faceboook Graph API</h3>
-				<p style="width: 100%;">The world's greatest source for quantified and structured data from the universe of Ice and Fire (and the HBO series Game of Thrones)</p>
+				<p>Website showing user Facebook details and feed using the graph API tool provided by Facebook.</p>
 				<div class="work-link row">
-					<a href="https://rawgit.com/nitin095/Ice-and-fire---API/master/index.html#/" target="blank">Preview</a>
-					<a href="#">Github repository</a>
+					<a href="https://rawgit.com/nitin095/Fb-graph-api/master/index.html#/" target="blank">View website</a>
+					<a href="https://github.com/nitin095/Fb-graph-api">Github repository</a>
 				</div>
 			</div>
 		
@@ -131,7 +131,7 @@
 
 	<div id="section-contact" class="container">
 			<h2>Contact</h2>
-			<div class="column" style="align-items: center;"> 
+			<div class="column align-items-center"> 
 			<p>Say hello to me at</p>
 			<div class="email">nitinshokeen9@gmail.com</div>
 			<div class="contact-item row">
@@ -144,9 +144,13 @@
 	<!-- end contact section -->
 
 	<footer>
-		<div style="text-align: center;padding: 2% 0%;">
-                © 2018 Handmade by Nitin Shokeen
-        </div>
+		<div>
+			<a href="#section-home" id="up-button">
+				<i class="far fa-arrow-alt-circle-up" ></i><br>
+				<span>Go to home</span>
+			</a>
+		</div>
+    	<small> © 2018 Handmade by Nitin Shokeen</small>
 	</footer>
 </body>
 <script type="text/javascript">
@@ -154,8 +158,8 @@
 	let allSections = document.querySelectorAll('*[id^="section"]');
 	let coverHeight = document.getElementById('section-home').clientHeight;
 
-	window.onscroll = function() {myFunction()};
-	window.onresize = function() {myFunction()};
+	window.onscroll = ()=> {myFunction()};
+	window.onresize = ()=> {myFunction()};
 	
 	let myFunction = ()=>{
 	     if (document.body.scrollTop > coverHeight || document.documentElement.scrollTop > coverHeight) {
