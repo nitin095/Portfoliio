@@ -507,6 +507,7 @@ footer div {} footer i {
         font-size: 1.5rem;
         transform: translateY(-30vw);
         line-height: 3rem;
+        letter-spacing: 10px;
     }
     header div {
         background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 50%, rgba(71, 4, 4, 1) 100%);
@@ -605,7 +606,7 @@ footer div {} footer i {
         width: 60vw;
         border: 2px solid white;
     }
-    
+
     /*contact section*/
     .email {
         font-size: 1.5rem;
