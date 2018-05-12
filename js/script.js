@@ -30,6 +30,14 @@ let UpdateNavbar = () => {
             } // end for loop
         } // end if
     } // emd for loop
+
+    //fade effect whil scrolling
+    for (let section of allSections) {
+        if (document.body.scrollTop > section.offsetTop + 400 || document.documentElement.scrollTop + 400 > section.offsetTop) {
+            section.style.opacity = "1";
+        } // end if
+    } // emd for loop
+
 } // end myFunction
 
 //function to display menu on mobile devices

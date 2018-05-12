@@ -185,15 +185,23 @@ nav.row span {
 .my-image {
     width: 100%;
     transform: rotate(-5deg);
+    transition: all 2s ease;
 }
 .my-image-container {
-    width: 20vw;
-    height: 21vw;
+    width: 18vw;
+    height: 19vw;
     transform: rotate(5deg);
     background: maroon;
+    transition: all 2s ease;
     -webkit-box-shadow: 0px 13px 38px -10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 13px 38px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 13px 38px -10px rgba(0, 0, 0, 0.75);
+}
+.my-image-container:hover > img{
+    transform: rotate(0deg);
+}
+.my-image-container:hover{
+    transform: rotate(0deg);
 }
 #section-about img {
     background: linear-gradient(330deg, #d5dcda, #d7e5e9, #ebeae0, #e4dbeb);
@@ -205,7 +213,10 @@ nav.row span {
 /*end about section*/
 
 /*tech section*/
-
+#section-technologies,#section-work,#section-about,#section-contact{
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+}
 .tech-image {
     width: 7vw;
     height: 7vw;
