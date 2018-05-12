@@ -10,6 +10,10 @@ body {
     /*scrol behavior works on firefox only*/
     scroll-behavior: smooth;
 }
+#section-about,#section-technologies,#section-work{
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+}
 .container {
     margin: 5% 0%;
     padding: 5% 5%;
@@ -213,10 +217,6 @@ nav.row span {
 /*end about section*/
 
 /*tech section*/
-#section-technologies,#section-work,#section-about,#section-contact{
-    opacity: 0.1;
-    transition: all 0.5s ease-in-out;
-}
 .tech-image {
     width: 7vw;
     height: 7vw;
